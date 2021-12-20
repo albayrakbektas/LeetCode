@@ -4,51 +4,50 @@
  */
  var romanToInt = function(s) {
     let I, V, X, L, C, D, M;
-    let arr = s.split('')
-    let j = []
-    let res = 0
-    for (let i=0; i<arr.length; i++) {
-        switch(arr[i]) {
+    let stringArray = s.split('')
+    let numberArray = []
+    let result = 0
+    for (let i=0; i<stringArray.length; i++) {
+        switch(stringArray[i]) {
             case 'I':
                 I = 1
-                j.push(I)
+                numberArray.push(I)
                 break;
             case 'V':
                 V = 5
-                j.push(V)
+                numberArray.push(V)
                 break;
             case 'X':
                 X = 10
-                j.push(X)
+                numberArray.push(X)
                 break;
             case 'L':
                 L = 50
-                j.push(L)
+                numberArray.push(L)
                 break;
             case 'C':
                 C = 100
-                j.push(C)
+                numberArray.push(C)
                 break;
             case 'D':
                 D = 500
-                j.push(D)
+                numberArray.push(D)
                 break;  
             case 'M':
                 M = 1000
-                j.push(M)
+                numberArray.push(M)
                 break;    
         }   
     } 
-    for (let k=0; k<j.length; k++) {
-        if ((!j[k+1]) || (j[k] >= j[k+1])) {
-            res += j[k]
-            console.log(res);
+    for (let k=0; k<numberArray.length; k++) {
+        if ((!numberArray[k+1]) || (numberArray[k] >= numberArray[k+1])) {
+            result += numberArray[k]
         } else {
-            res += (j[k+1] - j[k])
+            result += (numberArray[k+1] - numberArray[k])
             k++
-            console.log(res);
         }
     }
+    return result;
 };
 
 romanToInt("III")
