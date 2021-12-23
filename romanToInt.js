@@ -47,9 +47,5 @@
             k++
         }
     }
-    return result;
-};
-
-romanToInt("III")
-romanToInt("LVIII")
-romanToInt("MCMXCIV")
+    return result
+}
